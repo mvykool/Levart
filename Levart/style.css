@@ -1,0 +1,591 @@
+* {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+.dark-mode {
+    background-color: #000;
+}
+
+.title-darkmode {
+    display: flex;
+    justify-content: space-between;
+}
+
+#dark-mode-toggle {
+    border: none;
+    margin-right: 20px;
+    border-radius: 50%;
+    margin-top: 50px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dark-icon {
+    background-image: url(https://cdn1.iconfinder.com/data/icons/user-interface-16x16-vol-1/16/contrast-circle-512.png);
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+}
+
+
+/*greeting and user pic*/
+
+.top-part {
+    display: flex;
+    flex-direction: column;
+}
+
+.greetings {
+    display: flex;
+    margin-top: 10%;
+    color: #acb6b9;
+    font-weight: 600;
+    letter-spacing: 1px;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.user-img {
+    display: block;
+    height: 50px;
+    width: 50px;
+    margin-left: 120px;
+    object-fit: contain;
+}
+
+.bubble {
+    display: none;
+    background-color: turquoise;
+    position: absolute;
+    border-radius: 50%;
+    margin-top: -50px;
+    padding: 5px 5px;
+    margin-left: 38%;
+    height: 10px;
+    width: 10px;
+    transition: 0.5s;
+}
+
+.user-img:hover+.bubble {
+    display: block;
+}
+
+
+/*main title*/
+
+.main-title {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 40px;
+    font-family: 'Nunito', sans-serif;
+    color: #3e4146;
+    letter-spacing: 1px;
+    margin-left: 10%;
+    margin-bottom: 20px;
+}
+
+
+/* Menu*/
+
+.bar-menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.bar-menu li {
+    display: flex;
+    align-items: center;
+}
+
+li a {
+    margin: 5px 0;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    color: #acb6b9;
+    cursor: pointer;
+    padding: 0 7px;
+}
+
+.bar-menu li a:hover {
+    color: white;
+    transition: 1s;
+    background-color: turquoise;
+    border-radius: 15px;
+}
+
+.filter {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    background-color: #fff;
+    border: none;
+    width: 40px;
+    margin-top: 5px;
+    margin-left: 5px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.line {
+    width: 15px;
+    height: 2px;
+    background-color: #acb6b9;
+    margin: 2px 0;
+    cursor: pointer;
+}
+
+.filter:hover {
+    border: turquoise solid 1px;
+}
+
+.show {
+    display: block;
+}
+
+#drop-menu {
+    background-color: turquoise;
+    color: #fff;
+    margin-left: -105px;
+    width: 200px;
+    z-index: 10;
+    height: 50%;
+    margin-top: -55px;
+    padding: 50px 10px;
+    border-radius: 10px;
+    display: none;
+    position: fixed;
+    overflow: hidden;
+}
+
+.inner-menu,
+.inner-menu2,
+.inner-menu3,
+.inner-menu4 {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.inner-menu:hover,
+.inner-menu2:hover,
+.inner-menu3:hover,
+.inner-menu4:hover {
+    background-color: #3fa59d;
+    width: 90px;
+}
+
+#dark-inner:hover {
+    background-color: #000;
+}
+
+
+/* Grid layout*/
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 130px 130px;
+    grid-template-rows: 120px 80px 150px 120px 80px 150px;
+    justify-content: center;
+    gap: 2rem;
+    padding: 30px 5px;
+    padding-bottom: 50px;
+    margin-top: 20px;
+    grid-template-areas: "a b" "c b" "c d" "e f" "e g" "h g";
+}
+
+.rio {
+    grid-area: a;
+    background-image: url(https://a.cdn-hotels.com/gdcs/production143/d357/42fb6908-dcd5-4edb-9f8c-76208494af80.jpg?impolicy=fcrop&w=800&h=533&q=medium);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #fff;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.layer {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-top: 10px;
+    margin-top: -15px;
+}
+
+.osaka {
+    grid-area: b;
+    background-image: url(https://media.istockphoto.com/photos/osaka-castle-in-osaka-japan-picture-id1181423366?k=20&m=1181423366&s=612x612&w=0&h=-oEw1gRRb02hVkPibKc4gfVKQaE_YZQds75toPRHaaw=);
+    border-radius: 20px;
+    background-position: right;
+    background-size: cover;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #fff;
+    padding-top: 15px;
+}
+
+.london {
+    grid-area: c;
+    background-image: url(https://cdn.londonandpartners.com/visit/london-organisations/houses-of-parliament/63950-640x360-london-icons2-640.jpg);
+    border-radius: 20px;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #fff;
+    padding-top: 15px;
+}
+
+.new-york {
+    grid-area: d;
+    background-image: url(https://image.nuevayork.com/wp-content/uploads/2020/03/New-York-Helicopter-Tour-2.eric_both.bottom_right.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #fff;
+    padding-top: 15px;
+}
+
+.madrid {
+    grid-area: e;
+    background-image: url(https://ep01.epimg.net/elpais/imagenes/2022/02/17/paco_nadal/1645081988_020619_1645083193_noticia_normal.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #fff;
+    padding-top: 15px;
+}
+
+.seoul {
+    grid-area: f;
+    background-image: url(https://www.ef.com/wwen/blog/wp-content/uploads/2017/09/Visit_Seoul_web.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #fff;
+    padding-top: 15px;
+}
+
+.la {
+    grid-area: g;
+    background-image: url(https://www.viajarlosangeles.com/img/guia-viajar-los-angeles.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #fff;
+    padding-top: 15px;
+}
+
+.melbourne {
+    grid-area: h;
+    background-image: url(https://gostudyaus.es/wp-content/uploads/2018/10/MEL_header_2-1.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #fff;
+    padding-top: 15px;
+}
+
+
+/*Bouncy effect*/
+
+.rio:hover,
+.osaka:hover,
+.london:hover,
+.new-york:hover,
+.madrid:hover,
+.seoul:hover,
+.la:hover,
+.melbourne:hover {
+    animation: bounce 1.5s linear;
+}
+
+@keyframes bounce {
+    20%,
+    50%,
+    80%,
+    to {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    70% {
+        transform: translateY(-15px);
+    }
+    90% {
+        transform: translateY(-4px);
+    }
+}
+
+
+/*footer*/
+
+footer {
+    width: 100%;
+    background-color: turquoise;
+    backdrop-filter: blur(3px);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h3 {
+    color: #f5f5f5;
+    margin: 20px;
+}
+
+
+/* STYLES SPECIFIC TO FOOTER  */
+
+footer {
+    margin-bottom: 20px;
+}
+
+.footer .col {
+    width: 190px;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0px 20px 20px 20px;
+}
+
+.footer .col h1 {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 17px;
+    padding: 20px 0px 5px 0px;
+    color: #fff;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.250em;
+}
+
+.footer .col ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .col ul li {
+    color: #fff;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 5px 0px 5px 0px;
+    cursor: pointer;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+}
+
+.social ul li {
+    display: inline-block;
+    padding-right: 5px !important;
+}
+
+.footer .col ul li:hover {
+    color: #ffffff;
+    transition: .1s;
+    -webkit-transition: .1s;
+    -moz-transition: .1s;
+}
+
+.clearfix {
+    clear: both;
+}
+
+#copyright {
+    margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 1280px) {
+    .contain {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 1139px) {
+    .contain .social {
+        width: 1000px;
+        display: block;
+    }
+    .social h1 {
+        margin: 0px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .footer .col {
+        width: 33%;
+    }
+    .footer .col h1 {
+        font-size: 14px;
+    }
+    .footer .col ul li {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .footer .col {
+        width: 50%;
+    }
+    .footer .col h1 {
+        font-size: 14px;
+    }
+    .footer .col ul li {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .footer .col {
+        width: 100%;
+    }
+}
+
+
+/*back to top button*/
+
+#myBtn {
+    background-image: url(./arrow-top.svg);
+    background-size: cover;
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 80px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 2;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: #fff;
+    /* Set a background color */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 15px;
+    /* Some padding */
+    border-radius: 20px;
+    /* Rounded corners */
+    font-size: 18px;
+    /* Increase font size */
+    overflow: hidden;
+    /* hidde overflow*/
+}
+
+
+/*bottom nav-bar for small devices 420 px width*/
+
+.bottom-navbar {
+    display: flex;
+    align-items: center;
+    height: 10%;
+    min-width: 440px;
+    overflow: hidden;
+    position: fixed;
+    z-index: 12;
+}
+
+.bottom-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+    bottom: 0;
+    width: 100vw;
+    overflow: hidden;
+    position: fixed;
+    background-color: #fff;
+    border: #acb6b9 1px solid;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.bottom-menu li a {
+    margin: 5px;
+    position: absolute;
+    background-color: #fff;
+}
+
+#heart {
+    background-image: url(./heart.svg);
+    padding: 10px;
+    border-radius: 20%;
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#notification {
+    background-image: url(./notification.svg);
+    padding: 10px;
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20%;
+}
+
+#trip {
+    background-image: url(./trip.svg);
+    border-radius: 20%;
+    padding: 10px;
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#explore {
+    background-image: url(./explore.svg);
+    border-radius: 20%;
+    padding: 10px;
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

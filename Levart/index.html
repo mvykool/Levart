@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+    <!--Google fonts-->
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;900&display=swap" rel="stylesheet">
+
+    <!--Css-->
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Levart</title>
+
+</head>
+
+<body>
+
+    <main id="swup" class="transition-fade">
+
+        <!--upper part with title-->
+
+        <section class="top-part">
+
+            <div class="greetings">Hello Traveler!
+
+                <div class="user-logo">
+                    <img src="https://img.cppng.com/download/2020-06/62681-flat-icons-face-computer-design-avatar-icon.png" alt="user image" class="user-img">
+                    <span class="bubble"></span>
+                </div>
+            </div>
+
+
+            <div class="title-darkmode">
+
+
+                <h1 class="main-title"> Are you <br> ready for <br> a new trip?</h1>
+
+                <button class="dark-mode-toggle" id="dark-mode-toggle">
+                <div id="dark-icon"></div>
+            </button>
+
+            </div>
+
+
+
+        </section>
+
+        <!--menu-->
+
+        <div class="menu">
+            <ul class="bar-menu">
+                <li>
+                    <a href="/index.html">Home</a>
+
+                </li>
+                <li>
+                    <a href="/top.html">Top places</a>
+
+                </li>
+                <li>
+                    <a href="/underrated.html">Underrated</a>
+
+                </li>
+                <li>
+
+                    <!--drop down menu en mobiles -->
+
+
+                    <button class="filter" onclick="myMenu()">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                      </button>
+
+                    <ul id="drop-menu" class="open">
+                        <li class="inner-menu"> Europe</li>
+                        <li class="inner-menu2"> Americas</li>
+                        <li class="inner-menu3">Asia</li>
+                        <li class="inner-menu4">Australia</li>
+                    </ul>
+
+
+
+                </li>
+            </ul>
+        </div>
+
+
+
+        <!--Grid layout-->
+
+
+        <section>
+
+
+            <div id="grid-container">
+
+                <div class="rio">
+                    <div class="layer">Rio de Janeiro</div>
+                </div>
+                <div class="osaka">
+                    <div class="layer">Osaka</div>
+                </div>
+                <div class="london">
+                    <div class="layer">London</div>
+                </div>
+                <div class="new-york">
+                    <div class="layer">New York</div>
+                </div>
+                <div class="madrid">
+                    <div class="layer">Madrid</div>
+                </div>
+                <div class="seoul">
+                    <div class="layer">Seoul</div>
+                </div>
+                <div class="la">
+                    <div class="layer">L.A</div>
+                </div>
+                <div class="melbourne">
+                    <div class="layer">Melbourne</div>
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!--footer-->
+
+        <footer>
+
+            <div class="footer">
+
+                <div class="footer">
+                    <div class="contain">
+                        <div class="col">
+                            <h1>Company</h1>
+                            <ul>
+                                <li>About</li>
+                                <li>Mission</li>
+                                <li>Services</li>
+                                <li>Social</li>
+                                <li>Get in touch</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <h1>Products</h1>
+                            <ul>
+                                <li>About</li>
+                                <li>Mission</li>
+                                <li>Services</li>
+                                <li>Social</li>
+                                <li>Get in touch</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <h1>Accounts</h1>
+                            <ul>
+                                <li>About</li>
+                                <li>Mission</li>
+                                <li>Services</li>
+                                <li>Social</li>
+                                <li>Get in touch</li>
+
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <h1>Support</h1>
+                            <ul>
+                                <li>Contact us</li>
+                                <li>Web chat</li>
+                                <li>Open ticket</li>
+                            </ul>
+                        </div>
+                        <div class="col social">
+                            <h1>Social</h1>
+                            <ul>
+                                <li><img src="https://www.logo.wine/a/logo/Facebook/Facebook-f_Logo-Blue-Logo.wine.svg" width="32" style="width: 32px;"></li>
+                                <li><img src="https://www.logo.wine/a/logo/Instagram/Instagram-Logo.wine.svg" width="32" style="width: 32px;"></li>
+                                <li><img src="https://www.logo.wine/a/logo/TikTok/TikTok-Logo.wine.svg" width="32" style="width: 32px;"></li>
+                            </ul>
+
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+                <div id="copyright">
+                    <h3>Levart: &copy;</h3>
+
+                </div>
+
+                <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+
+
+            </div>
+
+
+    </main>
+
+
+    </footer>
+
+    <!--bottom navbar only for small screens 420px -->
+
+    <nav class="bottom-navbar">
+        <ul class="bottom-menu">
+            <li>
+                <a href="" id="explore"></a>
+            </li>
+            <li>
+                <a href="" id="trip"></a>
+            </li>
+            <li>
+                <a href="" id="notification"></a>
+            </li>
+            <li>
+                <a href="" id="heart"></a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+
+
+</body>
+
+<!--Javascript-->
+
+<script src="main.js"></script>
+
+</html>
